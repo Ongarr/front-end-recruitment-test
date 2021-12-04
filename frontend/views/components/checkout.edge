@@ -1,0 +1,103 @@
+<div class="checkout-wrapper">
+    <div class="left-side">
+        <form action="/order" method="POST" id="checkout">
+            <div class="header-wrapper">
+                <h3>Personal Information</h3>
+            </div>
+            <div class="checkout-fields-wrapper">
+                <div class="two-col">
+                    @!component('components/inputWrapper', {
+                        name: 'firstName',
+                        placeholder: 'Elon',
+                        label: 'First Name',
+                        id: 'first-name',
+                        type: 'text'
+                    })
+                    @!component('components/inputWrapper', {
+                        name: 'lastName',
+                        placeholder: 'Musk',
+                        label: 'Last Name',
+                        id: 'last-name',
+                        type: 'text'
+                    })
+                </div>
+                 @!component('components/inputWrapper', {
+                    name: 'email',
+                    placeholder: 'elon@spacex.com',
+                    label: 'Email',
+                    id: 'email',
+                    type: 'text'
+                })
+                <div class="two-col">
+                    @!component('components/selectWrapper', {
+                        name: 'country',
+                        label: 'Country',
+                        id: 'country'
+            
+                    })
+                    @!component('components/inputWrapper', {
+                        name: 'postalCode',
+                        placeholder: '10001',
+                        label: 'Postal',
+                        id: 'postal',
+                        type: 'tel',
+                        other: 'maxlength=5'
+                    })
+                </div>
+                @!component('components/inputWrapper', {
+                    name: 'phone',
+                    placeholder: '(212) 692-93-92',
+                    label: 'Phone number',
+                    id: 'phone',
+                    type: 'tel'
+                })
+            </div>
+            <div class="header-wrapper">
+                <h3>Payments Details</h3>
+            </div>
+            <div class="checkout-fields-wrapper">
+                @!component('components/inputWrapper', {
+                    name: 'creditCard',
+                    placeholder: '0000-0000-0000-0000',
+                    label: 'Credit Card Number',
+                    id: 'credit-card',
+                    type: 'tel',
+                })
+                <div class="two-col">
+                    @!component('components/inputWrapper', {
+                        name: 'CVV',
+                        placeholder: '000',
+                        label: 'Security Code',
+                        id: 'CVV',
+                        type: 'tel',
+                        other: `maxlength=3`
+                    })
+                    @!component('components/inputWrapper', {
+                        name: 'expDate',
+                        placeholder: 'MM/YY',
+                        label: 'Expiration Date',
+                        id: 'exp-date',
+                        type: 'tel',
+                        other: `maxlength=5`
+                    })
+                </div>
+            </div>
+            <span class="error-messages"></span>
+            <button type="submit">Complete Purchase</button>
+        </form>
+    </div>
+
+    <div class="right-side">
+        <div class="orders-wrapper">
+            <h3>Your order</h3>
+            <div class="cart-entry"><span>Apple Watch Sport</span><span>$ 580</span></div>
+            <div class="cart-entry"><span>Modern Buckle</span><span>$ 380</span></div>
+            <hr>
+            <div class="cart-entry"><span>Total Purchases</span><span>$ 960.00</span></div>
+            <div class="cart-entry"><span>Estimated tax</span><span>$ 0</span></div>
+            <hr>
+            <div class="cart-entry"><span><b>Total</b></span><span class="total-price">$ 960</span></div>
+        </div>
+    </div>
+    
+</div>

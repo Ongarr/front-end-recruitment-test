@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+h3 {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.checkout-wrapper {
+    font-family: 'Roboto';
+    display:flex;
+    gap: 25px;
+    counter-reset: section;  
+    width: 100%;
+}
+
+::placeholder {
+    font-family: 'Roboto';
+    color: #9b9b9b;
+}
+
+.input-wrapper, .select-wrapper {
+    display: block;
+    background-color: white;
+    padding: 6px 10px;
+    box-shadow: 0px 3px 0px 0px rgba(212,212,212,1);
+    border-radius: 7px;
+    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.input-wrapper input, .select-wrapper select{
+    width: 100%;
+    border: 0;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: white;
+}
+
+.input-wrapper label, .select-wrapper label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #515356
+}
+
+label {
+    display: block;
+}
+
+.two-col {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.header-wrapper {
+    position: relative;
+}
+
+.header-wrapper::before {
+    counter-increment: section;                   
+    content: counter(section) ;
+    position: absolute;
+    left: -40px;
+    font-size: 18px;
+    top: 50%;
+    font-weight: bold;
+    color: #fff;
+    transform: translateY(-50%) translateX(0%);
+    text-align: center;
+    padding: 4px 10px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+button[type="submit"] {
+    background-color: #6bd400;
+    box-shadow: 0px 3px 0px 0px rgba(212,212,212,1);
+    border-radius: 7px;
+    margin-bottom: 25px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    padding: 15px 0px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+.orders-wrapper {
+    display: block;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 3px 0px 0px rgba(212,212,212,1);
+    border-radius: 7px;
+    outline: 1px dashed #515356;
+    outline-offset: -10px;
+    margin-top: 35px;
+    color: black;
+}
+
+.orders-wrapper hr {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    margin-bottom: 15px;
+}
+
+.orders-wrapper span.total-price {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.left-side {
+    width: 65%;
+}
+
+.right-side { 
+    width: 35%;
+}
+
+.error-msg {
+    color: red;
+    position: absolute;
+    bottom: -22px;
+    font-size: 14px;
+}
+
+.cart-entry {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+   margin-bottom: 15px;
+}

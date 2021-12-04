@@ -2,7 +2,39 @@
 @set('title', 'Bacon factory')
 
 @section('body')
-  @!component('snowdog/bacon', {
-    img: '/images/bacon.jpg'
+  
+    @!component('snowdog/bacon', {
+      img: '/images/bacon.jpg'
+    })
+    <div class="counter-wrapper">
+      <p>
+        
+      </p>
+      <span></span>
+    </div>
+  
+
+<script>
+  let button = document.querySelector('button')
+  let counterWrapper = document.querySelector('.counter-wrapper span')
+  let counterText = document.querySelector('.counter-wrapper p')
+  let baconCounter = 0
+
+
+  
+  button.addEventListener('click', () => {
+    if (baconCounter === 0)  
+    {
+      counterText.innerHTML = `Wow! You cloned BACON! I made counter for you!`
+    }
+    baconCounter++ 
+    counterWrapper.innerHTML = baconCounter
+    console.log(baconCounter)
+    
+    
   })
+  
+</script>
+
 @end
+
